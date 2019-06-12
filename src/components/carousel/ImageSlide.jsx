@@ -5,7 +5,7 @@ const ImageSlide = ({ slide }) => {
   const entity = slide.entity;
 
   const styles = {
-    backgroundImage: `url(${entity.fieldCarouselSlideImage.url})`
+    backgroundImage: `url(${entity.fieldImageUrl})`
   };
 
   return (

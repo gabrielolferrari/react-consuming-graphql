@@ -15,10 +15,7 @@ const GET_CAROUSEL_SLIDES = `
             entity {
               ... on ParagraphCarouselSlide {
                 fieldCarouselSlideTitle,
-                fieldCarouselSlideImage {
-                  alt
-                  url
-                },
+                fieldImageUrl,
                 fieldCarouselSlideLink {
                   uri
                   title
@@ -42,6 +39,7 @@ class Carousel extends Component {
     api
     .post('', { query: GET_CAROUSEL_SLIDES })
     .then(result => {
+      console.log(result);
       const carousel_data = result.data.data.blockContentById.fieldCarouselSlideParagraph;
       this.setState({
         slides: carousel_data

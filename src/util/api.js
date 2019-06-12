@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'http://d8graphql.lndo.site:8000/graphql',
+  baseURL: 'https://d8graphql.lndo.site/graphql',
   responseType: "json"
 });
