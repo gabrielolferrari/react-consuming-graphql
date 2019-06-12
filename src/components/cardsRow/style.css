@@ -1,0 +1,14 @@
+.cards-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards-row-header {
+  text-align: center;
+  width: 100%;
+}
+
+.card-row-item {
+  padding: 0 10px;
+  box-sizing:border-box;
+}

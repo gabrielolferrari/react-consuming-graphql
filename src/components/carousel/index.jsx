@@ -7,10 +7,9 @@ import './style.css';
 const GET_CAROUSEL_SLIDES = `
   {
     blockContentById(id: "1") {
-      entityUuid
       ... on BlockContentCarousel {
         fieldCarouselTitle
-        fieldCarouselSlideParagraph {targetId
+        fieldCarouselSlideParagraph {
           ... on FieldBlockContentCarouselFieldCarouselSlideParagraph {
             entity {
               ... on ParagraphCarouselSlide {
@@ -39,7 +38,6 @@ class Carousel extends Component {
     api
     .post('', { query: GET_CAROUSEL_SLIDES })
     .then(result => {
-      console.log(result);
       const carousel_data = result.data.data.blockContentById.fieldCarouselSlideParagraph;
       this.setState({
         slides: carousel_data
