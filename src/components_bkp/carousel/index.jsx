@@ -6,7 +6,7 @@ import './style.css';
 
 const GET_CAROUSEL_SLIDES = `
   {
-    blockContentById(id: "1") {
+    blockContentById(id: "8") {
       ... on BlockContentCarousel {
         fieldCarouselTitle
         fieldCarouselSlideParagraph {
